@@ -7,18 +7,9 @@ datasource db {
   url      = "postgresql://user@localhost:5432/viadb?schema=public"
 }
 
-model WeightEntry {
-  id         Int      @id @default(autoincrement())
-  weight     Float
-  recordedAt DateTime
-  note       String?
-  createdAt  DateTime @default(now())
-}
-
-model Goal {
-  id             Int      @id @default(autoincrement())
-  startingWeight Float
-  targetWeight   Float
-  targetDate     DateTime?
-  updatedAt      DateTime @updatedAt
+model Contact {
+  id        Int      @id @default(autoincrement())
+  name      String
+  phone     String
+  createdAt DateTime @default(now())
 }
